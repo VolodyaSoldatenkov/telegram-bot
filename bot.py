@@ -58,7 +58,7 @@ def one_ready(bot, update, job_queue, chat_data):
 
 def two_ready(bot, update, job_queue, chat_data):
     chat = update.message.chat
-    if chat_data['duel']['second'] != update.message.from_user if isinstance(chat_data['duel']['second'], User) else chat_data['duel']['second'] != update.message.from_user.mention_html():
+    if chat_data['duel']['second'] != update.message.from_user.mention_html() and chat_data['duel']['second'] != '@' + update.message.from_user.username:
         return __is_opponent_ready__
     chat_data['duel']['second'] = update.message.from_user
     update.message.reply_text('Отлично!', reply_markup=ReplyKeyboardRemove(), quote=False)
