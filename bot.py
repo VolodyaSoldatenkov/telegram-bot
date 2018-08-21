@@ -3,7 +3,7 @@ from telegram import Message, ReplyKeyboardMarkup, ReplyKeyboardRemove, Chat, Us
 import random
 import time
 
-__token__ = "699439650:AAHFXnRYNpZCprnz-ey0hpV19XNATtn2llY"
+__token__ = "mytoken"
 
 __are_you_ready__, __is_opponent_ready__, __first_shots__, __second_shots__ = range(4)
 
